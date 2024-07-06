@@ -22,21 +22,12 @@ unsigned long long int ReversedNumber(unsigned long long int Number){
     
 }
 
-void PrintDigitsOfNumber(unsigned long long int Number){
-    do
-    {
-        cout<<Number%10<<endl;
-        Number /=10;
-    } while (Number!=0);
-    
-}
-
 int main()
 {
 
     unsigned long long int Number = ReadPositiveNumber("Enter Number");
-    Number=ReversedNumber(Number);
-    PrintDigitsOfNumber(Number);
+    cout<<ReversedNumber(Number)<<endl;
+    Number==ReversedNumber(Number) &&cout<<"it is Palindorm Number\n"||cout<<"it is not Palindorm Number\n";
     return 0;
     //-9223372036854775808
 }
