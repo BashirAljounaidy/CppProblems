@@ -2,6 +2,7 @@
 
 using namespace std;
 
+//Read input
 int ReadPositiveNumber(string message) {
     int Number=0;
     do {
@@ -11,11 +12,13 @@ int ReadPositiveNumber(string message) {
     return Number;
 }
 
+//Randome Functions 
 int RandomNumberFromTo(int From,int To){
     int random=rand()%(To-From)+From;
     return random;
 }
 
+//Arrays Functions
 void randomFillArray(int array[],int arrayLength){
     for (int i = 0; i < arrayLength; i++)
     {
@@ -24,40 +27,22 @@ void randomFillArray(int array[],int arrayLength){
 }
 
 void PrintArray(int array[],int arrayLength){
-    cout<<"Array Elements: ";
     for (int i = 0; i < arrayLength; i++)
     {
         cout<<array[i]<<"  ";
     }
     cout<<endl;
-}
 
-int MaxOfArray(int array[],int arrayLength){
-    int max=0;
-    for (int i = 0; i < arrayLength; i++)
-    {
-        if(array[i]>max) max=array[i];
-    }
-    return max;
 }
-
-int MinOfArray(int array[],int arrayLength){
-    int min=1000;
-    for (int i = 0; i < arrayLength; i++)
-    {
-        if(array[i]<min) min=array[i];
-    }
-    return min;
-}
-
 
 int main() {
     srand(static_cast<unsigned int>(time(NULL)));
-    int arraylenght,myArray[100];
-    arraylenght=ReadPositiveNumber("enter the lenght of array");
-    randomFillArray(myArray,arraylenght);
-    PrintArray(myArray,arraylenght);
-    cout<<"The Min : "<<MinOfArray(myArray,arraylenght)<<endl;
+    int myArray1[100],arraylength=0;
+    arraylength=ReadPositiveNumber("enter the lenght of array");
+    cout<<"Elements of Array:"<<endl;
+    randomFillArray(myArray1,arraylength);
+    PrintArray(myArray1,arraylength);
+
     return 0;
 }
 

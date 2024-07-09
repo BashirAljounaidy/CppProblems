@@ -23,7 +23,7 @@ void randomFillArray(int array[],int arrayLength){
     }
 }
 
-void ReadArray(int array[],int arrayLength){
+void PrintArray(int array[],int arrayLength){
     cout<<"Array Elements: ";
     for (int i = 0; i < arrayLength; i++)
     {
@@ -32,7 +32,6 @@ void ReadArray(int array[],int arrayLength){
     cout<<endl;
 
 }
-
 
 int MaxOfArray(int array[],int arrayLength){
     int max=0;
@@ -70,8 +69,7 @@ int main() {
     int arraylenght,myArray[100];
     arraylenght=ReadPositiveNumber("enter the lenght of array");
     randomFillArray(myArray,arraylenght);
-    ReadArray(myArray,arraylenght);
+    PrintArray(myArray,arraylenght);
     cout<<"The Avrage  : "<<AvgOfArray(myArray,arraylenght)<<endl;
     return 0;
 }
-
